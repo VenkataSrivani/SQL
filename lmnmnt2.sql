@@ -93,6 +93,7 @@ $$;
 
 --Stored Procedure to Add a New Book
 CREATE OR REPLACE FUNCTION AddBook(
+    
     p_Title VARCHAR(255),
     p_AuthorID INT,
     p_PublisherID INT,
@@ -114,3 +115,4 @@ $$;
 
 --Refreshing materialized view
 REFRESH Materialized View Member_Transaction_Summary_MV;
+REFRESH Materialized View Book_Borrowing_Summary_MV;
